@@ -9,12 +9,5 @@ export default async function Home() {
   // クライアントには「再生に必要な情報」だけを渡すので、
   // 将来 Vimeo / Mux に切り替えても、この行より下は一切変わらない。
   const videos = await listVideoSources();
-  return (
-    <>
-      <p style={{ textAlign: "center", fontSize: 12, color: "#888" }}>
-        自動反映テスト
-      </p>
-      <VideoBrowse videos={videos} />
-    </>
-  );
+  return <VideoBrowse videos={videos} />;
 }
